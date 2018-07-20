@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherKotlin</string>
+    <string name="current_location">北京</string>
+    <string name="updated_fail">更新失败,请稍后重试</string>
+    <string name="menu_warning">预警</string>
+    <string name="menu_city_list">城市列表</string>
+    <string name="share">分享</string>
+    <string name="title_settings">设置</string>
+</resources>

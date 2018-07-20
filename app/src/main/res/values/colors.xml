@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/weather_sun</color>
+    <color name="colorPrimaryDark">@color/weather_sun</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="weather_sun">#FF4A97D2</color>
+    <color name="settings_bkg">@color/contorl_bg_color_light</color>
+
+    <color name="contorl_icon_color_active_dark">#89FFFFFF</color>
+    <color name="contorl_icon_color_active_light">#66000000</color>
+    <color name="contorl_bg_color_light">#FFFAFAFA</color>
+</resources>
