@@ -1,16 +1,20 @@
 package com.leeyh.weather.ui.activity
 
-import android.app.ActionBar
 import android.app.Activity
 import android.os.Bundle
 import android.view.MenuItem
+import com.leeyh.weather.presenter.BasePresenter
+import com.leeyh.weather.presenter.view.BaseView
 
-open class BaseBarActivity : Activity() {
-    lateinit var bar: ActionBar
+open class BaseBarActivity<T : BasePresenter<*>> : Activity(), BaseView {
+    lateinit var presenter: T
+
+    override fun initView() {
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bar = actionBar
-        bar.setDisplayHomeAsUpEnabled(true)
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -22,10 +26,6 @@ open class BaseBarActivity : Activity() {
     }
 
     protected fun setBarTitle(titleId: Int) {
-        if (bar != null) {
-            bar.title = getString(titleId)
-        } else {
-            setTitle(titleId)
-        }
+        if (actionBar != null) actionBar.title = getString(titleId) else setTitle(titleId)
     }
 }

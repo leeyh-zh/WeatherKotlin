@@ -7,14 +7,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.leeyh.weather.R
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main_activity)
         setupActionBar()
     }
 

@@ -2,4 +2,9 @@
 <resources>
     <dimen name="contorl_icon_size_button">24dp</dimen>
     <dimen name="contorl_layout_margin_left">16dp</dimen>
+    <dimen name="contorl_icon_size_display3">72dp</dimen>
+    <dimen name="contorl_text_size_subheading">17sp</dimen>
+    <dimen name="contorl_divider_height_standard">17sp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
 </resources>

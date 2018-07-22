@@ -1,12 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/settings_bkg</item>
+        <item name="android:colorPrimary">@color/weather_sun</item>
+        <item name="android:colorPrimaryDark">@color/weather_sun</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
@@ -16,12 +16,21 @@
         <item name="android:windowExitTransition">@android:transition/no_transition</item>
         <item name="android:windowSharedElementExitTransition">@android:transition/no_transition</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <!--<item name="android:windowLightStatusBar">true</item>-->
         <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
     </style>
 
     <style name="OverflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow">
         <item name="android:src">@drawable/more_setting</item>
+    </style>
+
+    <style name="ClearableEditText">
+        <item name="clearButtonAlwaysVisible">false</item>
+        <item name="clearButtonDrawable">@drawable/ic_clear</item>
+        <item name="clearButtonHeight">16.0dip</item>
+        <item name="clearButtonPadding">5.0dip</item>
+        <item name="clearButtonPosition">end</item>
+        <item name="clearButtonWidth">16.0dip</item>
     </style>
 
 </resources>

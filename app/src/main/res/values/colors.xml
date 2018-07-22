@@ -5,8 +5,23 @@
     <color name="colorAccent">#FF4081</color>
     <color name="weather_sun">#FF4A97D2</color>
     <color name="settings_bkg">@color/contorl_bg_color_light</color>
+    <color name="float_button_color">@color/contorl_icon_color_active_light</color>
+    <color name="footer_button_rippple_color">#FFFFFFFF</color>
+    <!--search activity start-->
+    <color name="search_city_text">#FFFFFFFF</color>
+    <color name="search_city_hint">#89FFFFFF</color>
+    <color name="cursor_color">#dd55759b</color>
+    <color name="no_match_color">@color/contorl_text_color_hint_light</color>
+    <color name="divider_color">@color/contorl_divider_color_light</color>
+    <!--search activity end-->
+    <color name="ic_clear_color">#89ffffff</color>
+    <color name="ic_display_color">@color/contorl_icon_color_inactive_light</color>
+    <color name="ic_inactive_color">@color/contorl_icon_color_inactive_light</color>
 
+    <color name="contorl_bg_color_light">#FFFAFAFA</color>
     <color name="contorl_icon_color_active_dark">#89FFFFFF</color>
     <color name="contorl_icon_color_active_light">#66000000</color>
-    <color name="contorl_bg_color_light">#FFFAFAFA</color>
+    <color name="contorl_icon_color_inactive_light">#1E000000</color>
+    <color name="contorl_divider_color_light">#14000000</color>
+    <color name="contorl_text_color_hint_light">#2d000000</color>
 </resources>

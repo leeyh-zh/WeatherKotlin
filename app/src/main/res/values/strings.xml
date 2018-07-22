@@ -6,4 +6,9 @@
     <string name="menu_city_list">城市列表</string>
     <string name="share">分享</string>
     <string name="title_settings">设置</string>
+    <string name="no_citys">没有城市</string>
+    <string name="no_search_data">没有匹配项</string>
+    <string name="no_network_statu">无网络连接</string>
+    <string name="warning_string_no_network">当前未打开网络 请打开网络后重试</string>
+    <string name="city_list_search_hint">城市名</string>
 </resources>
