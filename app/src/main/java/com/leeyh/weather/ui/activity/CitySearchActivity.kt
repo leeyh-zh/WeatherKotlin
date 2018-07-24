@@ -7,21 +7,21 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
-import android.view.View
+import android.view.inputmethod.InputMethodManager
 import com.leeyh.weather.R
-import com.leeyh.weather.R.id.mNoSearchView
 import com.leeyh.weather.presenter.CitySearchPresenter
 import com.leeyh.weather.presenter.view.CitySearchView
-import com.leeyh.weather.ui.widget.ClearableEditText
 import com.leeyh.weather.util.AlertUtil
 import com.leeyh.weather.util.NetUtil
 import kotlinx.android.synthetic.main.search_citylist_activity.*
+import kotlinx.android.synthetic.main.search_citylist_bar.*
 import org.jetbrains.anko.toast
 
 class CitySearchActivity : BaseBarActivity<CitySearchPresenter>(), CitySearchView {
 
-    private var mCityKeyword: ClearableEditText? = null
     override fun searchResult(city: String, result: Boolean) {
         toast("$city $result")
     }
@@ -64,11 +64,20 @@ class CitySearchActivity : BaseBarActivity<CitySearchPresenter>(), CitySearchVie
             val actionbarLayout = LayoutInflater.from(this).inflate(R.layout.search_citylist_bar, null)
             actionBar.setDisplayShowCustomEnabled(true)
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setCustomView(actionbarLayout)
-            mCityKeyword = actionbarLayout.findViewById(R.id.search_bar_input_field)
-            mCityKeyword!!.setFocusable(true)
-            mCityKeyword!!.setFocusableInTouchMode(true)
-            mCityKeyword!!.requestFocus()
+            actionBar.customView = actionbarLayout
+            mCityKeyword.isFocusable = true
+            mCityKeyword.isFocusableInTouchMode = true
+            (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).showSoftInput(mCityKeyword, InputMethodManager.SHOW_FORCED)
+            mCityKeyword.addTextChangedListener(object : TextWatcher {
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                }
+
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                }
+
+                override fun afterTextChanged(s: Editable?) {
+                }
+            })
         }
     }
 
@@ -78,15 +87,11 @@ class CitySearchActivity : BaseBarActivity<CitySearchPresenter>(), CitySearchVie
         registerReceiver(mReceiver, filter)
     }
 
-    private fun unRegisterReceiver() {
+    override fun onDestroy() {
+        super.onDestroy()
         if (mReceiver != null) {
             unregisterReceiver(mReceiver)
             mReceiver = null
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        unRegisterReceiver()
     }
 }

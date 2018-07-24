@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
         setupActionBar()
     }
 
-    fun setupActionBar() {
+    private fun setupActionBar() {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
-        toolbarGps.setOnClickListener({
+        toolbarGps.setOnClickListener {
             Toast.makeText(this, "gps", Toast.LENGTH_SHORT).show()
-        })
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

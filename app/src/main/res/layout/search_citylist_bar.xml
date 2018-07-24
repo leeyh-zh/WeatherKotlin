@@ -5,7 +5,7 @@
     android:layout_height="50dip">
 
     <com.leeyh.weather.ui.widget.ClearableEditText
-        android:id="@+id/search_bar_input_field"
+        android:id="@+id/mCityKeyword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
