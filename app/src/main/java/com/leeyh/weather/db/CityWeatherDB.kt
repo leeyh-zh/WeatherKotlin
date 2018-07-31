@@ -1,8 +1,13 @@
 package com.leeyh.weather.db
 
-class CityWeatherDB private constructor() {
+import android.content.Context
+import com.leeyh.weather.App
+
+class CityWeatherDB private constructor(context: Context = App.instance) {
     companion object {
-        @JvmStatic
         val instance: CityWeatherDB by lazy { CityWeatherDB() }
+    }
+    init {
+
     }
 }
