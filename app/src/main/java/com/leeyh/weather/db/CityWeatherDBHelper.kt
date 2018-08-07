@@ -16,6 +16,7 @@ class CityWeatherDBHelper(context: Context = App.instance) : ManagedSQLiteOpenHe
     override fun onCreate(db: SQLiteDatabase) {
         db.createTable(CityForecastTable.NAME, true,
                 CityForecastTable.ID to INTEGER + PRIMARY_KEY,
+                CityForecastTable.CID to TEXT,
                 CityForecastTable.LOCATION to TEXT,
                 CityForecastTable.PARENT_CITY to TEXT,
                 CityForecastTable.ADMIN_AREA to TEXT,
